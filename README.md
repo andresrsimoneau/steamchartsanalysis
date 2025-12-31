@@ -61,8 +61,8 @@ POTUS Dwight D. Eisenhower 1956 | 68% approval | 457 EC | WON | PV margin 10.9 p
 POTUS Bill Clinton 1996 | 54% approval | 379 EC | WON | PV margin 8.5 pp
 VP George H.W Bush 1988 | 51% approval | 426 EC | WON | PV margin 7.7 pp
 POTUS Barack Obama 2012 | 51% approval | 332 EC | WON | PV margin 3.9 pp
-VP Al Gore 2000 | 57% approval | 266 EC | LOST | PV margin 0.5 pp
-VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp
+**VP Al Gore 2000 | 57% approval | 266 EC | LOST | PV margin 0.5 pp**
+**VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp**
 ```
 
 Had Harris won the 2024 U.S. presidential election, it would have constituted a significant historical outlier; she would have been the first vice president in U.S. history to win with an approval rating below 45%, and the first incumbent overall to do so in over 75 years, following Harry Truman in 1948 against Thomas Dewey. 
