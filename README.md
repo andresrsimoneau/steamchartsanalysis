@@ -7,6 +7,15 @@ This project also attempts to be politically neutral on its conclusions and to s
 
 ### Vice Presidenct Incumbancy is a Major Disadvantage Regardless of Approval Ratings
 
+'''
+INCUMBENT VICE PRESIDENT RESULTS SINCE 1948
+Richard Nixon | 58% approval | 219 EC | LOST
+Hubert Humphrey | 42% approval | 191 EC | LOST
+Al Gore | 57% approval | 266 EC | LOST
+Kamala Harris | 41% approval | 226 EC | LOST
+George H.W Bush | 51% approval | 426 EC | WON
+'''
+
 ### Approval Ratings Below 45% Are A Death Sentence
 
 ## Incumbency Advantage
