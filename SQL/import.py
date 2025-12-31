@@ -62,6 +62,8 @@ WHERE is_president = 0
 presidents.execute(vp_results)
 vp_ec_results = presidents.fetchall()
 
+print vp_ec_results
+print below_45_results
 
 #REAL refers to floating_point numbers (i.e 5.12345)
 #TEXT refers to numeric text (i.e 'Batman')
