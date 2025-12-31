@@ -28,6 +28,8 @@ VP Kamala Harris 2024 | 41% approval | 226 EC | LOST | PV margin -1.3 pp
 
 The data assessment of incumbent results with an approval rating of 45% or below reveal that Harris had the second lowest margin loss of 1.5 percentage points to Donald Trump out of the 6 losing candidates with an approval rating of 45% or lower, only narrowly losing to incumbent Vice President Hubert Humphrey's margin loss of 0.7 to Richard Nixon in 1968 (ironically, following the withdrawal of President Lyndon Johnson in the 1968 election). This strongly contests the narrative that Harris was a poor candidate and supports the opposing narrative that Harris had to contend with a difficult electoral environment, given Joe Biden's low approval ratings resulting from electoral frustration over the economy and inflation. 
 
+Incumbent Vice Presidents who have run for the Oval Office also follow a trend of electoral losses. With the exception of George H.W Bush in 1988, most Vice Presidents, even those serving under popular presidencies, tend to lose the Presidential Election. Had Biden's approval rating improved during his presidency, even hypothetically hitting above 50%, it is not certain that Harris would have won the election. Presidential candidates Richard Nixon and Al Gore, despite the strong popularity of Dwight D. Eisenhower and Bill Clinton, were unable to win their own respective elections. 
+
 ```text
 INCUMBENT RESULTS WITH AN APPROVAL RATING OF 45% OR BELOW
 POTUS Harry Truman 1948 | 40% approval | 303 EC | WON | PV margin 4.48 pp
