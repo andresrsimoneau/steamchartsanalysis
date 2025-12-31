@@ -69,4 +69,4 @@ VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp
 
 ## Project Limitations (There R Quite A Few...)
 
-### Not Enough Reliable Data To Compare Incumbents Against Their Opponents   
+### Not Enough Reliable Data To Compare Incumbents Against Their Opponents, Polling Data Isn't Reliable    
