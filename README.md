@@ -73,6 +73,7 @@ VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp
 
 ### 1960 and 2000 Elections Had Questionable Outcomes; Strongly Sway Data
 
+There has been  
 Due to the historical grey areas involved in these 2 elections, had the outcomes even marginally changed in the slightest, the data could have produced:
 ```text
 INCUMBENT VICE PRESIDENT RESULTS SINCE 1948
