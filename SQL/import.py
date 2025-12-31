@@ -39,6 +39,8 @@ CREATE TABLE IF NOT EXISTS presidents(
 )
 """)
 
+presidents.execute("DELETE FROM presidents;")
+
 presidents.executemany("""
 INSERT INTO presidents (name, election_year, approval, electoral_votes, is_president)
 VALUES (?, ?, ?, ?, ?)
@@ -54,20 +56,46 @@ presidents.execute(u45_or_below)
 below_45_results = presidents.fetchall()
 
 
-vp_results = """
-SELECT name, electoral_votes
+vp_results_win = """
+SELECT name, approval, electoral_votes
 FROM presidents
-WHERE is_president = 0
+WHERE is_president = 0 AND electoral_votes > 270
 """
-presidents.execute(vp_results)
+presidents.execute(vp_results_win)
 vp_ec_results = presidents.fetchall()
 
-print("INCUMBENT VICE PRESIDENTS AND EC COUNT")
-for name, electoral_votes in vp_ec_results:
-	print(f"{name}| {electoral_votes} EC")
-print("INCUMBENT PRESIDENTS WITH AN APPROVAL RATING BELOW 45% AND WON")
+vp_presidents_loss = """
+SELECT name, approval, electoral_votes 
+FROM presidents
+WHERE is_president = 0 AND electoral_votes < 270
+"""
+presidents.execute(vp_presidents_loss)
+vp_loss = presidents.fetchall()
+
+u_45_and_lost = """
+SELECT name, approval, electoral_votes
+FROM presidents
+WHERE approval <= 45 AND electoral_votes < 270
+"""
+
+
+presidents.execute(u_45_and_lost)
+u45_and_lost = presidents.fetchall()
+
+print("INCUMBENT VICE PRESIDENTS WHO WON")
+for name, approval, electoral_votes in vp_ec_results:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC")
+print("INCUMBENT VICE PRESIDENTS WHO LOST")
+for name, approval, electoral_votes in vp_loss:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC")
+print("\n" * 2)
+print("INCUMBENT PRESIDENTS OR VP WITH AN APPROVAL RATING BELOW 45% AND WON")
 for name, approval, electoral_votes in below_45_results:
 	print(f"{name} | {approval}% approval | {electoral_votes} EC")
+print("INCUMBENT PRESIDENTS OR VP WITH AN APPROVAL RATING BELOW 45% AND LOST") 
+for name, approval, electoral_votes in u45_and_lost:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC")
+print("\n" * 2)
 
 
 #REAL refers to floating_point numbers (i.e 5.12345)
