@@ -24,7 +24,7 @@ VP George H.W Bush 1988 | 51% approval | 426 EC | WON
 
 ### Presidential Approval Rating Over 50%
 
-## Kamala Harris' Defeat Was Following Norms, Not Being An Outlier
+## Kamala Harris’ Defeat Was Not a Historical Outlier, but the Historical Norm
 
 Had Harris won the 2024 U.S. presidential election, it would have constituted a significant historical outlier; she would have been the first vice president in U.S. history to win with an approval rating below 45%, and the first incumbent overall to do in over 75 years, following Harry Truman in 1948.  
 
