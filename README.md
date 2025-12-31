@@ -24,7 +24,7 @@ VP George H.W Bush 1988 | 51% approval | 426 EC | WON
 
 ### Presidential Approval Rating Over 50%
 
-## Kamala Harris’ Defeat Was Not a Historical Outlier, but the Historical Norm
+## Kamala Harris’ Defeat Was Not a Historical Outlier, but following Historical Trends
 
 The data assessment of incumbent results with an approval rating of 45% or below reveal that Harris had the second lowest margin loss of 1.5 percentage points to Donald Trump out of the 6 losing candidates with an approval rating of 45% or lower, only narrowly losing to incumbent Vice President Hubert Humphrey's margin loss of 0.7 to Richard Nixon in 1968 (ironically, following the withdrawal of President Lyndon Johnson in the 1968 election). This strongly contests the narrative that Harris was a poor candidate and supports the opposing narrative that Harris had to contend with a difficult electoral environment, given Joe Biden's low approval ratings resulting from electoral frustration over the economy and inflation. 
 
