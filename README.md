@@ -1,4 +1,4 @@
-# Incumbency Role in Presidential Election Outcome Analysis
+# Incumbency Role in Presidential Election Outcomes
 
 This project is
 
