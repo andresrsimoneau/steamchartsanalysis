@@ -83,15 +83,6 @@ ORDER BY won_election
 presidents.execute(potus_results)
 potus_ec_results = presidents.fetchall()
 
-potus_50results = """
-SELECT name, approval, electoral_votes, won_election
-FROM presidents
-WHERE is_president = 1 AND approval >= 50
-ORDER BY won_election
-"""
-presidents.execute(potus_50results)
-potus_ec_50results = presidents.fetchall()
-
 print("INCUMBENT VICE PRESIDENT RESULTS SINCE 1948")
 for name, approval, electoral_votes, won_election in vp_ec_results:
 	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
@@ -108,10 +99,6 @@ print("INCUMBENT RESULTS WITH AN APPROVAL RATING OVER 50%")
 for name, approval, electoral_votes, won_election in over_50:	
 	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
 print("\n" * 0)
-print("INCUMBENT PRESIDENT RESULTS WITH AN APPROVAL RATING OVER 50%")
-for name, approval, electoral_votes, won_election in potus_ec_50results:	
-	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-
 #makes the saves to the .db file and closes the connection
 conn.commit()
 conn.close()
