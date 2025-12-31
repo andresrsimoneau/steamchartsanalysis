@@ -94,7 +94,6 @@ print_section("INCUMBENT VICE PRESIDENT RESULTS SINCE 1948", vp_results)
 print_section("INCUMBENT PRESIDENT RESULTS SINCE 1948", potus_results)
 print_section("INCUMBENT RESULTS WITH AN APPROVAL RATING BELOW 45%", u45_or_below)
 print_section("INCUMBENT RESULTS WITH AN APPROVAL RATING OVER 50%", over50)
-
 #makes the saves to the .db file and closes the connection
 conn.commit()
 conn.close()
