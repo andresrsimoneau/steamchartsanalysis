@@ -50,6 +50,6 @@ VP Hubert Humphrey 1968 | 42% approval | 191 EC | LOST | PV margin -0.7 pp
 VP Kamala Harris 2024 | 41% approval | 226 EC | LOST | PV margin -1.3 pp
 ```
 
-Had Harris won the 2024 U.S. presidential election, it would have constituted a significant historical outlier; she would have been the first vice president in U.S. history to win with an approval rating below 45%, and the first incumbent overall to do so in over 75 years, following Harry Truman in 1948 against Thomas Dewey. Harris would have also been the first U.S candidate in history to win a presidential election without having won a primary of a major political party in the United States.
+Had Harris won the 2024 U.S. presidential election, it would have constituted a significant historical outlier; she would have been the first vice president in U.S. history to win with an approval rating below 45%, and the first incumbent overall to do so in over 75 years, following Harry Truman in 1948 against Thomas Dewey. 
 
 ## Project Limitations (There R Quite A Few...)
