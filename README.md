@@ -26,6 +26,8 @@ VP George H.W Bush 1988 | 51% approval | 426 EC | WON
 
 ## Kamala Harris’ Defeat Was Not a Historical Outlier, but the Historical Norm
 
+Harris had the second lowest margin loss of 1.5 percentage points to Donald Trump of the 6 losing candidates with an approval rating of 45% or lower, narrowly losing to incumbent Vice President Hubert Humphrey's margin of 0.7 to Richard Nixon in 1968. This strongly contests the narrative that Harris was a poor candidate and supports the opposing narrative of the difficult electoral environment Harris had dealt with from Joe Biden's low approval ratings.
+
 Had Harris won the 2024 U.S. presidential election, it would have constituted a significant historical outlier; she would have been the first vice president in U.S. history to win with an approval rating below 45%, and the first incumbent overall to do in over 75 years, following Harry Truman in 1948.  
 
 ## Project Limitations (There R Quite A Few...)
