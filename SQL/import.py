@@ -88,7 +88,7 @@ def print_section(title, query):
     presidents.execute(query)
     for name, approval, electoral_vote, outcome in presidents.fetchall():
         print(f"{name} | {approval}% approval | {electoral_vote} EC | {outcome}")
-    print()
+    print() #used for spacing
 
 print_section("INCUMBENT VICE PRESIDENT RESULTS SINCE 1948", vp_results)
 print_section("INCUMBENT PRESIDENT RESULTS SINCE 1948", potus_results)
