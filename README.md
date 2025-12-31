@@ -1,4 +1,4 @@
-# Incumbency Role in Presidential Election Outcomes
+# Incumbency Role in Presidential Elections
 
 This project is
 
@@ -25,3 +25,5 @@ VP George H.W Bush 1988 | 51% approval | 426 EC | WON
 ### Presidential Approval Rating Over 50%
 
 ## Kamala Harris' Defeat Was Following Norms, Not Being An Outlier
+
+## Project Limitations (There R Quite A Few...)
