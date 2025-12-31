@@ -5,7 +5,7 @@ This project is
 This project also attempts to be politically neutral on its conclusions and to strictly focus on trends and patterns noted. 
 ## Incumbency Disadvantage 
 
-### Vice Presidenct Incumbancy is a Major Disadvantage Regardless of Approval Ratings
+### Vice Presidenct Incumbancy is a Major Historical Disadvantage 
 
 
 ```text
