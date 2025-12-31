@@ -47,7 +47,7 @@ VALUES (?, ?, ?, ?, ?)
 u45_or_below = """
 SELECT name, approval, electoral_votes
 FROM presidents
-WHERE approval <= 45
+WHERE approval <= 45 AND electoral_votes > 270
 """
 
 presidents.execute(u45_or_below)
@@ -62,10 +62,13 @@ WHERE is_president = 0
 presidents.execute(vp_results)
 vp_ec_results = presidents.fetchall()
 
-print("Incumbent Vice Presidents and EC Count")
-print(vp_ec_results)
-print("Incumbent Presidents with an approval rating below 45% and EC Count")
-print(below_45_results)
+print("INCUMBENT VICE PRESIDENTS AND EC COUNT")
+for name, electoral_votes in vp_ec_results:
+	print(f"{name}| {electoral_votes} EC")
+print("INCUMBENT PRESIDENTS WITH AN APPROVAL RATING BELOW 45% AND WON")
+for name, approval, electoral_votes in below_45_results:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC")
+
 
 #REAL refers to floating_point numbers (i.e 5.12345)
 #TEXT refers to numeric text (i.e 'Batman')
