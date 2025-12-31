@@ -83,22 +83,18 @@ ORDER BY won_election
 presidents.execute(potus_results)
 potus_ec_results = presidents.fetchall()
 
-print("INCUMBENT VICE PRESIDENT RESULTS SINCE 1948")
-for name, approval, electoral_votes, won_election in vp_ec_results:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-print("\n" * 0)
-print("INCUMBENT PRESIDENT RESULTS SINCE 1948")
-for name, approval, electoral_votes, won_election in potus_ec_results:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-print("\n" * 0)
-print("INCUMBENT RESULTS WITH AN APPROVAL RATING BELOW 45%")
-for name, approval, electoral_votes, won_election in below_45_results:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-print("\n" * 0)
-print("INCUMBENT RESULTS WITH AN APPROVAL RATING OVER 50%")
-for name, approval, electoral_votes, won_election in over_50:	
-	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-print("\n" * 0)
+def print_section(title, query):
+    print(title)
+    presidents.execute(query)
+    for name, approval, electoral_vote, outcome in presidents.fetchall():
+        print(f"{name} | {approval}% approval | {electoral_vote} EC | {outcome}")
+    print()
+
+print_section("INCUMBENT VICE PRESIDENT RESULTS SINCE 1948", vp_results)
+print_section("INCUMBENT PRESIDENT RESULTS SINCE 1948", potus_results)
+print_section("INCUMBENT RESULTS WITH AN APPROVAL RATING BELOW 45%", u45_or_below)
+print_section("INCUMBENT RESULTS WITH AN APPROVAL RATING OVER 50%", over50)
+
 #makes the saves to the .db file and closes the connection
 conn.commit()
 conn.close()
