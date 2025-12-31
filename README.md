@@ -24,4 +24,4 @@ VP George H.W Bush 1988 | 51% approval | 426 EC | WON
 
 ### Presidential Approval Rating Over 50%
 
-## Kamala Harris' Defeat Was The Historic Norm, Not The Outlier
+## Kamala Harris' Defeat Was Following Norms, Not Being An Outlier
