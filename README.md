@@ -72,3 +72,14 @@ VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp
 ### Not Enough Reliable Data To Compare Incumbents Against Their Opponents, Polling Data Isn't Reliable   
 
 ### 1960 and 2000 Elections Had Questionable Outcomes; Strongly Sway Data
+
+Due to the historical grey areas involved in these 2 elections, had the outcomes even marginally changed in the slightest, the data could have produced:
+```text
+INCUMBENT VICE PRESIDENT RESULTS SINCE 1948
+VP George H.W Bush 1988 | 51% approval | 426 EC | WON | PV margin 7.7 pp
+VP Al Gore 2000 | 57% approval | 266 EC | WON | PV margin 0.5 pp
+VP Richard Nixon 1960 | 58% approval | 219 EC | WON | PV margin -0.17 pp
+VP Hubert Humphrey 1968 | 42% approval | 191 EC | LOST | PV margin -0.7 pp
+VP Kamala Harris 2024 | 41% approval | 226 EC | LOST | PV margin -1.3 pp
+```
+which tells an entirely different story than the data we currently have 
