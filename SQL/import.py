@@ -7,7 +7,11 @@ conn = sqlite3.connect("gamesinfo.db")
 games = conn.cursor()
 
 #Creating Games Table
-games.execute()
+games.execute("""CREATE TABLE games(
+		game_name TEXT,
+		year_released INTEGER,
+		sales_in_millions REAL,
+	)""")
 
 
 
