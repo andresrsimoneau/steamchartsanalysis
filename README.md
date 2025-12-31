@@ -82,4 +82,4 @@ VP Richard Nixon 1960 | 58% approval | 219 EC | WON | PV margin -0.17 pp
 VP Hubert Humphrey 1968 | 42% approval | 191 EC | LOST | PV margin -0.7 pp
 VP Kamala Harris 2024 | 41% approval | 226 EC | LOST | PV margin -1.3 pp
 ```
-which tells an entirely different story than the data we currently have 
+which tells an entirely different story than the data we currently have... (don't have presidents drop out of the race and have the VP run? lol)
