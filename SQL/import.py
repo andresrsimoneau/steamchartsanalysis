@@ -10,24 +10,24 @@ presidents = conn.cursor()
 #all approval rating data collected from https://www.presidency.ucsb.edu/statistics/data/presidential-job-approval-all-data
 # TRUE = POTUS, FALSE = VP (too lazy to write out POTUS lol)
 presidential_outcomes = [
-	('Harry Truman', 1948, 40, 303, 1),
-	('Dwight D. Eisenhower', 1956, 68, 457, 1),
-	('Richard Nixon', 1960, 58, 219, 0),
-	('Lyndon B. Johnson', 1964, 74, 486, 1),
-	('Richard Nixon', 1972, 56, 520, 1),
-	('Gerald Ford', 1976, 45, 240, 1),
-	('Jimmy Carter', 1980, 37, 49, 1),
-	('Ronald Reagan', 1984, 58, 525, 1),
-	('George H.W Bush', 1988, 51, 426, 0),
-	('George H.W Bush', 1992, 34, 168, 1),
-	('Bill Clinton', 1996, 54, 379, 1),
-	('Al Gore', 2000, 57, 266, 0),
-	('George W. Bush', 2004, 48, 286, 1),
-	('Barack Obama', 2012, 51, 332, 1),
-	('Donald Trump', 2020, 45, 232, 1),
-	('Kamala Harris', 2024, 41, 226, 0),
+	('Harry Truman', 1948, 40, 303, 1, 'WON'),
+	('Dwight D. Eisenhower', 1956, 68, 457, 1, 'WON'),
+	('Richard Nixon', 1960, 58, 219, 0, 'LOST'),
+	('Lyndon B. Johnson', 1964, 74, 486, 1, 'WON'),
+	('Hubert Humphrey', 1968, 42, 191, 0, 'LOST'),
+	('Richard Nixon', 1972, 56, 520, 1, 'WON'),
+	('Gerald Ford', 1976, 45, 240, 1, 'LOST'),
+	('Jimmy Carter', 1980, 37, 49, 1, 'LOST'),
+	('Ronald Reagan', 1984, 58, 525, 1, 'WON'),
+	('George H.W Bush', 1988, 51, 426, 0, 'WON'),
+	('George H.W Bush', 1992, 34, 168, 1, 'LOST'),
+	('Bill Clinton', 1996, 54, 379, 1, 'WON'),
+	('Al Gore', 2000, 57, 266, 0, 'LOST'),
+	('George W. Bush', 2004, 48, 286, 1, 'WON'),
+	('Barack Obama', 2012, 51, 332, 1, 'WON'),
+	('Donald Trump', 2020, 45, 232, 1, 'LOST'),
+	('Kamala Harris', 2024, 41, 226, 0, 'LOST'),
 ]
-
 #Creating presidents Table
 presidents.execute("""
 CREATE TABLE IF NOT EXISTS presidents(
@@ -35,76 +35,60 @@ CREATE TABLE IF NOT EXISTS presidents(
     election_year INTEGER,
     approval INTEGER,
     electoral_votes INTEGER,
-    is_president INTEGER
+    is_president INTEGER,
+    won_election TEXT
 )
 """)
 
 presidents.execute("DELETE FROM presidents;")
 
 presidents.executemany("""
-INSERT INTO presidents (name, election_year, approval, electoral_votes, is_president)
-VALUES (?, ?, ?, ?, ?)
+INSERT INTO presidents (name, election_year, approval, electoral_votes, is_president, won_election)
+VALUES (?, ?, ?, ?, ?, ?)
 """, presidential_outcomes)
 
 u45_or_below = """
-SELECT name, approval, electoral_votes
+SELECT name, approval, electoral_votes, won_election
 FROM presidents
-WHERE approval <= 45 AND electoral_votes > 270
+WHERE approval <= 45 
+ORDER BY won_election
 """
-
 presidents.execute(u45_or_below)
 below_45_results = presidents.fetchall()
 
-
-vp_results_win = """
-SELECT name, approval, electoral_votes
+vp_results = """
+SELECT name, approval, electoral_votes, won_election
 FROM presidents
-WHERE is_president = 0 AND electoral_votes > 270
+WHERE is_president = 0  
+ORDER BY won_election
 """
-presidents.execute(vp_results_win)
+presidents.execute(vp_results)
 vp_ec_results = presidents.fetchall()
 
-vp_presidents_loss = """
-SELECT name, approval, electoral_votes 
+over50andwon = """
+SELECT name, approval, electoral_votes, won_election
 FROM presidents
-WHERE is_president = 0 AND electoral_votes < 270
+WHERE approval >= 50 AND electoral_votes > 270
+ORDER BY won_election
 """
-presidents.execute(vp_presidents_loss)
-vp_loss = presidents.fetchall()
+presidents.execute(over50andwon)
+over_50andwon = presidents.fetchall()
 
-u_45_and_lost = """
-SELECT name, approval, electoral_votes
-FROM presidents
-WHERE approval <= 45 AND electoral_votes < 270
-"""
-
-
-presidents.execute(u_45_and_lost)
-u45_and_lost = presidents.fetchall()
-
-print("INCUMBENT VICE PRESIDENTS WHO WON")
-for name, approval, electoral_votes in vp_ec_results:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC")
-print("INCUMBENT VICE PRESIDENTS WHO LOST")
-for name, approval, electoral_votes in vp_loss:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC")
-print("\n" * 2)
-print("INCUMBENT PRESIDENTS OR VP WITH AN APPROVAL RATING BELOW 45% AND WON")
-for name, approval, electoral_votes in below_45_results:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC")
-print("INCUMBENT PRESIDENTS OR VP WITH AN APPROVAL RATING BELOW 45% AND LOST") 
-for name, approval, electoral_votes in u45_and_lost:
-	print(f"{name} | {approval}% approval | {electoral_votes} EC")
-print("\n" * 2)
-
-
-#REAL refers to floating_point numbers (i.e 5.12345)
-#TEXT refers to numeric text (i.e 'Batman')
-#INTEGER of course, refers to integers (i.e 5)
+print("INCUMBENT VICE PRESIDENT RESULT SINCE 1948")
+for name, approval, electoral_votes, won_election in vp_ec_results:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
+print("\n" * 1)
+print("INCUMBENT RESULT WITH AN APPROVAL RATING BELOW 45%")
+for name, approval, electoral_votes, won_election in below_45_results:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
+print("\n" * 1)
+print("INCUMBENT RESULT WITH AN APPROVAL RATING OVER 50% AND WON")
+for name, approval, electoral_votes, won_election in over_50andwon:	
+	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
 
 #makes the saves to the .db file and closes the connection
 conn.commit()
-
+conn.close()
 
 
 
