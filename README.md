@@ -30,7 +30,7 @@ The data assessment of the presidential incumbent results with an approval ratin
 
 The data assessment of incumbent results with an approval rating of 45% or below reveals that Harris had the second-smallest popular-vote margin of defeat (1.5 percentage points) among six losing incumbents in this category, only narrowly losing to incumbent Vice President Hubert Humphrey's margin of defeat (0.7 percentage points) to Richard Nixon in 1968. This suggests candidate factors are not leading factors for determining presidential elections, but instead, are overshadowed by party approval ratings and other electoral factors such as the economy and inflation. 
 
-Election patterns among incumbent vice presidents further reinforce this trend.  With the exception of George H.W Bush in 1988, most Vice Presidents, even those serving under popular presidencies, tend to lose the Presidential Election. Candidates such as Richard Nixon and Al Gore, despite the strong popularity of Dwight D. Eisenhower and Bill Clinton, were unable to win their own respective elections. This trend also demonstrates Harris' loss following a historical pattern and not as a result of circumstances unique to the candidate. 
+Election patterns among incumbent vice presidents further reinforce this trend.  With the exception of George H.W Bush in 1988, most Vice Presidents, even those serving under popular presidencies, tend to lose the Presidential Election. Candidates such as Richard Nixon and Al Gore, despite the strong popularity of Dwight D. Eisenhower and Bill Clinton, were unable to win their own respective elections. Out of all of the candidates with an approval rating over 50%, the only losses came from Vice Presidential candidates, while Presidential candidates went undefeated. This trend also demonstrates Harris' loss following a historical pattern and not as a result of circumstances unique to the candidate. 
 
 ```text
 INCUMBENT RESULTS WITH AN APPROVAL RATING OF 45% OR BELOW
@@ -61,8 +61,8 @@ POTUS Dwight D. Eisenhower 1956 | 68% approval | 457 EC | WON | PV margin 10.9 p
 POTUS Bill Clinton 1996 | 54% approval | 379 EC | WON | PV margin 8.5 pp
 VP George H.W Bush 1988 | 51% approval | 426 EC | WON | PV margin 7.7 pp
 POTUS Barack Obama 2012 | 51% approval | 332 EC | WON | PV margin 3.9 pp
-**VP Al Gore 2000 | 57% approval | 266 EC | LOST | PV margin 0.5 pp**
-**VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp**
+VP Al Gore 2000 | 57% approval | 266 EC | LOST | PV margin 0.5 pp
+VP Richard Nixon 1960 | 58% approval | 219 EC | LOST | PV margin -0.17 pp
 ```
 
 Had Harris won the 2024 U.S. presidential election, it would have constituted a significant historical outlier; she would have been the first vice president in U.S. history to win with an approval rating below 45%, and the first incumbent overall to do so in over 75 years, following Harry Truman in 1948 against Thomas Dewey. 
