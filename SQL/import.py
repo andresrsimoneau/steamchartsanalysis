@@ -65,25 +65,51 @@ ORDER BY won_election
 presidents.execute(vp_results)
 vp_ec_results = presidents.fetchall()
 
-over50andwon = """
+over50 = """
 SELECT name, approval, electoral_votes, won_election
 FROM presidents
-WHERE approval >= 50 AND electoral_votes > 270
+WHERE approval >= 50
 ORDER BY won_election
 """
-presidents.execute(over50andwon)
-over_50andwon = presidents.fetchall()
+presidents.execute(over50)
+over_50 = presidents.fetchall()
 
-print("INCUMBENT VICE PRESIDENT RESULT SINCE 1948")
+potus_results = """
+SELECT name, approval, electoral_votes, won_election
+FROM presidents
+WHERE is_president = 1  
+ORDER BY won_election
+"""
+presidents.execute(potus_results)
+potus_ec_results = presidents.fetchall()
+
+potus_50results = """
+SELECT name, approval, electoral_votes, won_election
+FROM presidents
+WHERE is_president = 1 AND approval >= 50
+ORDER BY won_election
+"""
+presidents.execute(potus_50results)
+potus_ec_50results = presidents.fetchall()
+
+print("INCUMBENT VICE PRESIDENT RESULTS SINCE 1948")
 for name, approval, electoral_votes, won_election in vp_ec_results:
 	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-print("\n" * 1)
-print("INCUMBENT RESULT WITH AN APPROVAL RATING BELOW 45%")
+print("\n" * 0)
+print("INCUMBENT PRESIDENT RESULTS SINCE 1948")
+for name, approval, electoral_votes, won_election in potus_ec_results:
+	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
+print("\n" * 0)
+print("INCUMBENT RESULTS WITH AN APPROVAL RATING BELOW 45%")
 for name, approval, electoral_votes, won_election in below_45_results:
 	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
-print("\n" * 1)
-print("INCUMBENT RESULT WITH AN APPROVAL RATING OVER 50% AND WON")
-for name, approval, electoral_votes, won_election in over_50andwon:	
+print("\n" * 0)
+print("INCUMBENT RESULTS WITH AN APPROVAL RATING OVER 50%")
+for name, approval, electoral_votes, won_election in over_50:	
+	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
+print("\n" * 0)
+print("INCUMBENT PRESIDENT RESULTS WITH AN APPROVAL RATING OVER 50%")
+for name, approval, electoral_votes, won_election in potus_ec_50results:	
 	print(f"{name} | {approval}% approval | {electoral_votes} EC | {won_election}")
 
 #makes the saves to the .db file and closes the connection
